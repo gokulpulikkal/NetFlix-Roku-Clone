@@ -1,0 +1,22 @@
+<?xml version = "1.0" encoding = "utf-8" ?>
+
+<!--********** Copyright 2016 Roku Corp.  All Rights Reserved. **********-->
+ 
+<component name = "MarkupListItem" extends = "Group" >
+ 
+<interface> 
+    <field id = "itemContent" type = "node" onChange = "showcontent" />
+    <field id = "focusPercent" type = "float" onChange = "showfocus" />
+</interface>
+<script type = "text/brightscript" uri="menuItem.brs"/>
+<children>
+    <Group id="contentGroup">
+        <LayoutGroup id="contentLayoutGroup" layoutDirection="horiz" itemSpacings="[30]" horizAlignment="left" >
+            <LayoutGroup id="iconLayoutGroup" itemSpacings="[10]">
+                <Poster id = "itemIcon" translation = "[ 0, 114 ]" width = "53" height = "30" />
+                <Rectangle id = "itemcursor" translation = "[ 0, 148 ]" width = "53" height = "6" color = "0xEB3333FF" opacity = "0.0" />
+            </LayoutGroup>
+        </LayoutGroup>
+    </Group>
+</children>
+</component>

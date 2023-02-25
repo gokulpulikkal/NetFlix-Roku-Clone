@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component name="MenuView" extends="Group">
+
+    <script type="text/brightscript" uri="MenuView.brs" />
+    <script type="text/brightscript" uri="pkg:/components/Utils/CommonChecks.brs" />
+    <script type="text/brightscript" uri="pkg:/components/DataService/DataController/DataController.brs" />
+    <script type="text/brightscript" uri="pkg:/components/Utils/RegistryLibrary.brs" />
+    <script type="text/brightscript" uri="pkg:/components/Utils/UtilFunctions.brs" />
+
+    <interface>
+    </interface>
+
+    <children>
+        <Rectangle id="backgroundRect" color="#000" height="1080" width="450"/>
+        <MarkupList 
+            id = "exampleMarkupList" 
+            itemComponentName = "MarkupListItem" 
+            itemSize = "[ 450, 54 ]" 
+            itemSpacing = "[ 0, 100 ]" 
+            drawFocusFeedback = "false" 
+            vertFocusAnimationStyle = "floatingFocus" />
+    </children>
+</component>

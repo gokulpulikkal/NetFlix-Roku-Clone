@@ -21,3 +21,6 @@ splash_min_time=1500
 
 ## Set UI resolution to 1080p
 ui_resolutions=fhd
+
+run_as_process=1
+bs_prof_enabled=true
