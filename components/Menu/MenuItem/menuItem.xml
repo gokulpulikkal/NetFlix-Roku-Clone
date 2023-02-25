@@ -1,23 +1,42 @@
-<?xml version = "1.0" encoding = "utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 
 <!--********** Copyright 2016 Roku Corp.  All Rights Reserved. **********-->
  
-<component name = "MarkupListItem" extends = "Group" >
+<component name="MarkupListItem" extends="Group" >
  
 <interface> 
-    <field id = "itemContent" type = "node" onChange = "showcontent" />
-    <field id = "focusPercent" type = "float" onChange = "showfocus" />
+    <field id="itemContent" type="node" onChange="showContent" />
+    <field id="focusPercent" type="float" onChange="showFocus" />
+    <field id="listHasFocus" type="bool" onChange="onListHasFocus" />
 </interface>
-<script type = "text/brightscript" uri="menuItem.brs"/>
+<script type="text/brightscript" uri="menuItem.brs"/>
 <children>
     <Group id="contentGroup">
-        <LayoutGroup id="contentLayoutGroup" layoutDirection="horiz" itemSpacings="[30]" horizAlignment="left" >
-            <LayoutGroup id="iconLayoutGroup" itemSpacings="[10]">
-                <Poster id = "itemIcon" translation = "[ 0, 114 ]" width = "53" height = "30" />
-                <Rectangle id = "itemcursor" translation = "[ 0, 148 ]" width = "53" height = "6" color = "0xEB3333FF" opacity = "0.0" />
-            </LayoutGroup>
-            <Label id = "itemLabel" height="30" vertAlign="center" />
+        <Label id="itemLabel" height="30" vertAlign="center" />
+        <LayoutGroup id="iconLayoutGroup" itemSpacings="[10]">
+                <Poster id="itemIcon" width="53" height="30" />
+                <Rectangle id="itemCursor" width="53" height="6" color="0xEB3333FF" opacity="0.0" />
         </LayoutGroup>
     </Group>
+
+    <Animation id="showingAnimation"
+        duration="0.2"
+        repeat="false"
+        easeFunction="outExpo" >
+        <Vector2DFieldInterpolator id = "IconGroupInterpolator"
+            fieldToInterp="iconLayoutGroup.translation" />
+        <Vector2DFieldInterpolator id = "labelInterpolator"
+            fieldToInterp="itemLabel.translation" />
+    </Animation>
+
+    <Animation id="hidingAnimation"
+        duration="0.1"
+        repeat="false"
+        easeFunction="linear" >
+        <Vector2DFieldInterpolator id = "IconGroupHidingInterpolator"
+            fieldToInterp="iconLayoutGroup.translation" />
+        <Vector2DFieldInterpolator id = "labelHidingInterpolator"
+            fieldToInterp="itemLabel.translation" />
+    </Animation>
 </children>
 </component>

@@ -4,7 +4,7 @@ function init() as void
     examplerect = m.menuList.boundingRect()
     centerx = (1920 - examplerect.width) / 2
     centery = (1080 - examplerect.height) / 2
-    m.menuList.translation = [ 40, centery + 46 ]
+    m.menuList.translation = [0, centery + 46 ]
 
     m.top.observeField("focusedChild", "onFocusChildChange")
 end function

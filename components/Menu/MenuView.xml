@@ -15,7 +15,7 @@
         <MarkupList 
             id = "exampleMarkupList" 
             itemComponentName = "MarkupListItem" 
-            itemSize = "[ 450, 54 ]" 
+            itemSize = "[ 750, 54 ]" 
             itemSpacing = "[ 0, 100 ]" 
             drawFocusFeedback = "false" 
             vertFocusAnimationStyle = "floatingFocus" />

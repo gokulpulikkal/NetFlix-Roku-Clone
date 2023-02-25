@@ -3,7 +3,7 @@ function init() as void
 
     m.menu = m.top.findNode("menu")
     m.Button = m.top.findNode("Button")
-    m.menu.setFocus(true)
+    m.Button.setFocus(true)
 
     ' m.global.screenManager.callFunc("goToScreen",{type:"HomeView", data:m.movies})
 end function
