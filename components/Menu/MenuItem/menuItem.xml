@@ -16,6 +16,7 @@
                 <Poster id = "itemIcon" translation = "[ 0, 114 ]" width = "53" height = "30" />
                 <Rectangle id = "itemcursor" translation = "[ 0, 148 ]" width = "53" height = "6" color = "0xEB3333FF" opacity = "0.0" />
             </LayoutGroup>
+            <Label id = "itemLabel" height="30" vertAlign="center" />
         </LayoutGroup>
     </Group>
 </children>
