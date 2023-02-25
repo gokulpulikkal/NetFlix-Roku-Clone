@@ -64,9 +64,11 @@ end function
 
 ' Animation handling 
 function showItem() as void
+    m.hidingAnimation.control = "stop"
     m.showingAnimation.control = "start"
 end function
 
 function hideItem() as void
+    m.showingAnimation.control = "stop"
     m.hidingAnimation.control = "start"
 end function

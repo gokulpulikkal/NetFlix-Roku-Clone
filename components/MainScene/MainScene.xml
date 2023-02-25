@@ -4,6 +4,6 @@
 	<children>
 		<MenuView id="menu" />
 
-		<Button id="Button" text="Iam button"/>
+		<Button id="Button" translation="[900, 400]" text="Iam button"/>
 	</children>
 </component>

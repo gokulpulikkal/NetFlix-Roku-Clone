@@ -11,7 +11,8 @@
     </interface>
 
     <children>
-        <Rectangle id="backgroundRect" color="#000" height="1080" width="450"/>
+        
+        <Rectangle id="backgroundRect" color="#000" height="1080" width="800"/>
         <MarkupList 
             id = "exampleMarkupList" 
             itemComponentName = "MarkupListItem" 
