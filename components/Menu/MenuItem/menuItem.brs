@@ -10,6 +10,7 @@ function init()
     m.LABEL_INITIAL_X_TRANSLATION = -450
     m.ICON_GROUP_FINAL_X_TRANSLATION = 50
     m.LABEL_FINAL_X_TRANSLATION = 120
+    m.SHOW_ANIMATION_DURATION = 0.2
 
     ' Animation references
     m.showingAnimation = m.top.findNode("showingAnimation")
@@ -43,6 +44,9 @@ function showContent()
     itemContent = m.top.itemContent
     m.itemIcon.uri = itemContent.url
     m.itemLabel.text = itemContent.title
+
+    ' Set animation speed
+    m.showingAnimation.duration = m.SHOW_ANIMATION_DURATION + (itemContent.index/10)
 end function
 
 function showFocus()
