@@ -54,7 +54,7 @@ function onFocusChildChange() as void
         m.menuList.setFocus(true)
         showMenuItems(true)
     else
-        if (NOT m.menuList.isInFocusChain())
+        if (NOT m.top.isInFocusChain())
             showMenuItems(false)
         end if
     end if

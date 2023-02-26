@@ -9,15 +9,15 @@ function init() as void
 end function
 
 function onKeyEvent(key as String, press as Boolean) as Boolean
-    handled = false
-    if press then
-      if (key = "right") then
-        m.Button.setFocus(true)
-        handled = false
-      else
-        m.menu.setFocus(true)
-        handled = true
-      end if
+  handled = false
+  if press then
+    if (key = "right") then
+      m.Button.setFocus(true)
+      handled = false
+    else
+      m.menu.setFocus(true)
+      handled = true
     end if
-    return handled
-  end function
+  end if
+  return handled
+end function
