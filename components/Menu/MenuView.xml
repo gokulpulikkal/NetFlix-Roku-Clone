@@ -17,10 +17,7 @@
             <Label id="profileNameLabel" text="Gokul Testing" height="30" vertAlign="center"/>
         </LayoutGroup>
 
-        <MarkupList 
-            id = "exampleMarkupList" 
-            itemComponentName = "MarkupListItem" 
-            itemSize = "[ 750, 54 ]" 
+        <MarkupList id = "exampleMarkupList" itemComponentName = "MarkupListItem" itemSize = "[ 750, 54 ]" 
             itemSpacing = "[ 0, 100 ]" 
             drawFocusFeedback = "false" 
             vertFocusAnimationStyle = "floatingFocus" />
@@ -71,7 +68,7 @@
         </Animation>
 
         <Animation id="hidingAnimation"
-            duration="0.1"
+            duration="0.2"
             repeat="false"
             easeFunction="linear" >
             <Vector2DFieldInterpolator id = "profileLayoutGroupHideInterpolator"

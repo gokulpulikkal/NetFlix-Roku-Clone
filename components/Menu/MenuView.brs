@@ -25,13 +25,13 @@ function init() as void
     m.notificationLabelInterpolator = m.top.findNode("notificationLabelInterpolator")
     m.rightEndGroupInterpolator = m.top.findNode("rightEndGroupInterpolator")
     m.fadeInAnimation = m.top.findNode("fadeInAnimation")
-    m.fadeOutAnimation = m.top.findNode("fadeOutAnimation")
     
     m.hidingAnimation = m.top.findNode("hidingAnimation")
     m.profileLayoutGroupHideInterpolator = m.top.findNode("profileLayoutGroupHideInterpolator")
     m.notificationIconHideInterpolator = m.top.findNode("notificationIconHideInterpolator")
     m.notificationLabelHideInterpolator = m.top.findNode("notificationLabelHideInterpolator")
     m.rightEndBottomBtnsGroupHideInterpolator = m.top.findNode("rightEndBottomBtnsGroupHideInterpolator")
+    m.fadeOutAnimation = m.top.findNode("fadeOutAnimation")
 
     content = CreateObject("roSGNode", "MarkupListContent")
     for i = 0 to content.getChildCount() - 1
@@ -55,10 +55,16 @@ function onFocusChildChange() as void
         m.menuList.setFocus(true)
         showMenuItems(true)
     else
-        showMenuItems(false)
+        if (NOT m.menuList.isInFocusChain())
+            showMenuItems(false)
+        end if
     end if
 end function
 
+'''''''''
+' setAnimationValues: Sets the values needed for interpolators and animation node to work correctly
+' 
+'''''''''
 function setAnimationValues() as void
     m.profileGroupInterpolator.key = [0.0, 1.0]
     m.profileGroupInterpolator.keyValue = [m.PROFILE_GROUP_INITIAL_TRANSLATION, m.PROFILE_GROUP_FINAL_TRANSLATION]
@@ -83,6 +89,10 @@ function setAnimationValues() as void
     m.bottomLabelsShowingAnimation.duration = m.SHOW_ANIMATION_DURATION + (numberOfChild/10)
 end function
 
+'''''''''
+' stopALlAnimations: Stops all the animations
+' 
+'''''''''
 function stopALlAnimations() as void
     m.profileGroupShowingAnimation.control = "stop"
     m.notificationIconShowingAnimation.control = "stop"
@@ -92,6 +102,11 @@ function stopALlAnimations() as void
     m.fadeOutAnimation.control = "stop"
 end function
 
+'''''''''
+' showMenuItems: Handling the animation works. Shows the proper animation according to the situation
+' 
+' @param {boolean} shouldShow: Boolean tha will be true incase of menuitems needs to be visible.
+'''''''''
 function showMenuItems(shouldShow as boolean) as void
     stopAllAnimations()
     if (shouldShow)
@@ -105,6 +120,10 @@ function showMenuItems(shouldShow as boolean) as void
     end if 
 end function
 
+'''''''''
+' setInitialTranslations: Sets Initial translation of the menuItems
+' 
+'''''''''
 function setInitialTranslations() as void
     m.profileLayoutGroup.translation = m.PROFILE_GROUP_INITIAL_TRANSLATION
     m.notificationIcon.translation = m.NOTIFICATION_ICON_INITIAL_TRANSLATION
