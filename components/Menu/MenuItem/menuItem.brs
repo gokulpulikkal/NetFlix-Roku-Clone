@@ -1,9 +1,6 @@
 function init()
     m.top.id = "markupListItem"
-    m.itemIcon = m.top.findNode("itemIcon")
-    m.itemLabel = m.top.findNode("itemLabel")
-    m.itemCursor = m.top.findNode("itemCursor")
-    m.iconLayoutGroup = m.top.findNode("iconLayoutGroup")
+    m.menuButton = m.top.findNode("button")
 
     ' Constants
     m.ICON_GROUP_INITIAL_X_TRANSLATION = 30
@@ -26,8 +23,8 @@ function init()
 end function
 
 function setInitialTranslation() as void
-    m.iconLayoutGroup.translation = [m.ICON_GROUP_INITIAL_X_TRANSLATION, 0]
-    m.itemLabel.translation = [m.LABEL_INITIAL_X_TRANSLATION, 0]
+    m.menuButton.iconPosterLGTranslation = [m.ICON_GROUP_INITIAL_X_TRANSLATION, 0]
+    m.menuButton.itemLabelTranslation = [m.LABEL_INITIAL_X_TRANSLATION, 0]
 end function
 
 function setUpAnimationValues() as void
@@ -43,15 +40,20 @@ end function
 
 function showContent()
     itemContent = m.top.itemContent
-    m.itemIcon.uri = itemContent.url
-    m.itemLabel.text = itemContent.title
+    m.menuButton.iconURI = itemContent.url
+    m.menuButton.text = itemContent.title
 
     ' Set animation speed
     m.labelShowingAnimation.duration = m.SHOW_ANIMATION_DURATION + (itemContent.index/10)
 end function
 
 function showFocus()
-    m.itemCursor.opacity = m.top.focusPercent
+    m.menuButton.cursorOpacity = m.top.focusPercent
+    if m.top.focusPercent > 0.5
+        m.menuButton.showFocus = true
+    else
+        m.menuButton.showFocus = false
+    end if
 end function
 
 function onListHasFocus(event as object) as void

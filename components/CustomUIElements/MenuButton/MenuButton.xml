@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component name="MenuButton" extends="Group">
+
+    <script type="text/brightscript" uri="MenuButton.brs" />
+
+    <interface>
+        <field id="iconPosterLGTranslation" type="vector2d" alias="iconPosterLayoutGroup.translation" />
+        <field id="itemLabelTranslation" type="vector2d" alias="itemLabel.translation" />
+        <field id="iconURI" type="string" alias="iconPoster.uri"/>
+        <field id="text" type="string" alias="itemLabel.text"/>
+        <field id="cursorOpacity" type="float" alias="itemCursor.opacity"/>
+
+        <field id="showFocus" type="boolean" value="false" onChange="onFocusChange"/>
+
+    </interface>
+
+    <children>
+        <Label id="itemLabel" height="30" color="#FFFF" vertAlign="center" />
+        <LayoutGroup id="iconPosterLayoutGroup" itemSpacings="[10]">
+            <Poster id="iconPoster" width="53" height="30" uri=""/>
+            <Rectangle id="itemCursor" width="53" height="6" color="0xEB3333FF" opacity="0.0" />
+        </LayoutGroup>
+    </children>
+</component>
