@@ -11,8 +11,12 @@
     </interface>
 
     <children>
-        
         <Rectangle id="backgroundRect" color="#000" height="1080" width="800"/>
+        <LayoutGroup id="profileLayoutGroup" layoutDirection="horiz" itemSpacings="[30]" translation="[30, 50]">
+            <Poster id="profileIcon" uri="http://www.sdktestinglab.com/animicon.jpg" width="53" height="30"/>
+            <Label id="profileNameLabel" text="Gokul Testing" height="30" vertAlign="center"/>
+        </LayoutGroup>
+
         <MarkupList 
             id = "exampleMarkupList" 
             itemComponentName = "MarkupListItem" 
@@ -20,5 +24,65 @@
             itemSpacing = "[ 0, 100 ]" 
             drawFocusFeedback = "false" 
             vertFocusAnimationStyle = "floatingFocus" />
+
+        <Group id="NotificationBtnGroup">
+            <Poster id="notificationIcon" uri="http://www.sdktestinglab.com/animicon.jpg" width="53" height="30" translation="[30, 1000]"/>
+            <Label id="notificationLabel" text="Notification" height="30" vertAlign="center" translation="[90, 1000]"/>
+        </Group>
+
+        <Group id="rightEndBottomBtnsGroup" translation="[1200, 1010]">
+            <LayoutGroup id="rootGroup" layoutDirection="horiz" itemSpacings="[150]">
+                <LayoutGroup id="getHelpLayoutGroup" layoutDirection="horiz" itemSpacings="[30]">
+                    <Poster id="getHelpIcon" uri="http://www.sdktestinglab.com/animicon.jpg" width="53" height="30"/>
+                    <Label id="getHelpLabel" text="Get Help" height="30" vertAlign="center"/>
+                </LayoutGroup>
+
+                <LayoutGroup id="exitLayoutGroup" layoutDirection="horiz" itemSpacings="[30]">
+                    <Poster id="exitIcon" uri="http://www.sdktestinglab.com/animicon.jpg" width="53" height="30"/>
+                    <Label id="exitLabel" text="Exit Netflix" height="30" vertAlign="center"/>
+                </LayoutGroup>
+            </LayoutGroup>
+        </Group>
+
+        <Animation id="profileGroupShowingAnimation"
+            duration="0.2"
+            repeat="false"
+            easeFunction="outExpo" >
+            <Vector2DFieldInterpolator id = "profileGroupInterpolator"
+                fieldToInterp="profileLayoutGroup.translation"/>
+        </Animation>
+
+        <Animation id="notificationIconShowingAnimation"
+            duration="0.2"
+            repeat="false"
+            easeFunction="outExpo" >
+            <Vector2DFieldInterpolator id = "notificationIconInterpolator"
+                fieldToInterp="notificationIcon.translation" />
+        </Animation>
+
+        <Animation id="bottomLabelsShowingAnimation"
+            duration="0.2"
+            repeat="false"
+            easeFunction="outExpo" >
+            <Vector2DFieldInterpolator id="notificationLabelInterpolator"
+                fieldToInterp="notificationLabel.translation"/>
+            <Vector2DFieldInterpolator id="rightEndGroupInterpolator"
+                fieldToInterp="rightEndBottomBtnsGroup.translation"/>
+        </Animation>
+
+        <Animation id="hidingAnimation"
+            duration="0.1"
+            repeat="false"
+            easeFunction="linear" >
+            <Vector2DFieldInterpolator id = "profileLayoutGroupHideInterpolator"
+                fieldToInterp="profileLayoutGroup.translation" />
+            <Vector2DFieldInterpolator id = "notificationIconHideInterpolator"
+                fieldToInterp="notificationIcon.translation" />
+            <Vector2DFieldInterpolator id = "notificationLabelHideInterpolator"
+                fieldToInterp="notificationLabel.translation" />
+            <Vector2DFieldInterpolator id = "rightEndBottomBtnsGroupHideInterpolator"
+                fieldToInterp="rightEndBottomBtnsGroup.translation" />
+        </Animation>
+
     </children>
 </component>

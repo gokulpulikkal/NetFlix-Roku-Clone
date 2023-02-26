@@ -25,6 +25,12 @@
         easeFunction="outExpo" >
         <Vector2DFieldInterpolator id = "IconGroupInterpolator"
             fieldToInterp="iconLayoutGroup.translation" />
+    </Animation>
+
+    <Animation id="labelShowingAnimation"
+        duration="0.2"
+        repeat="false"
+        easeFunction="outExpo" >
         <Vector2DFieldInterpolator id = "labelInterpolator"
             fieldToInterp="itemLabel.translation" />
     </Animation>

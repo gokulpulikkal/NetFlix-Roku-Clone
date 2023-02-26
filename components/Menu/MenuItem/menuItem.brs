@@ -9,11 +9,12 @@ function init()
     m.ICON_GROUP_INITIAL_X_TRANSLATION = 30
     m.LABEL_INITIAL_X_TRANSLATION = -450
     m.ICON_GROUP_FINAL_X_TRANSLATION = 50
-    m.LABEL_FINAL_X_TRANSLATION = 120
+    m.LABEL_FINAL_X_TRANSLATION = 160
     m.SHOW_ANIMATION_DURATION = 0.2
 
     ' Animation references
     m.showingAnimation = m.top.findNode("showingAnimation")
+    m.labelShowingAnimation = m.top.findNode("labelShowingAnimation")
     m.iconGroupInterpolator = m.top.findNode("IconGroupInterpolator")
     m.labelInterpolator = m.top.findNode("labelInterpolator")
     m.hidingAnimation = m.top.findNode("hidingAnimation")
@@ -46,7 +47,7 @@ function showContent()
     m.itemLabel.text = itemContent.title
 
     ' Set animation speed
-    m.showingAnimation.duration = m.SHOW_ANIMATION_DURATION + (itemContent.index/10)
+    m.labelShowingAnimation.duration = m.SHOW_ANIMATION_DURATION + (itemContent.index/10)
 end function
 
 function showFocus()
@@ -66,9 +67,11 @@ end function
 function showItem() as void
     m.hidingAnimation.control = "stop"
     m.showingAnimation.control = "start"
+    m.labelShowingAnimation.control = "start"
 end function
 
 function hideItem() as void
+    m.labelShowingAnimation.control = "stop"
     m.showingAnimation.control = "stop"
     m.hidingAnimation.control = "start"
 end function
