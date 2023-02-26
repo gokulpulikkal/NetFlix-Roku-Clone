@@ -24,6 +24,8 @@ function init() as void
     m.bottomLabelsShowingAnimation = m.top.findNode("bottomLabelsShowingAnimation")
     m.notificationLabelInterpolator = m.top.findNode("notificationLabelInterpolator")
     m.rightEndGroupInterpolator = m.top.findNode("rightEndGroupInterpolator")
+    m.fadeInAnimation = m.top.findNode("fadeInAnimation")
+    m.fadeOutAnimation = m.top.findNode("fadeOutAnimation")
     
     m.hidingAnimation = m.top.findNode("hidingAnimation")
     m.profileLayoutGroupHideInterpolator = m.top.findNode("profileLayoutGroupHideInterpolator")
@@ -86,6 +88,8 @@ function stopALlAnimations() as void
     m.notificationIconShowingAnimation.control = "stop"
     m.bottomLabelsShowingAnimation.control = "stop"
     m.hidingAnimation.control = "stop"
+    m.fadeInAnimation.control = "stop"
+    m.fadeOutAnimation.control = "stop"
 end function
 
 function showMenuItems(shouldShow as boolean) as void
@@ -94,8 +98,10 @@ function showMenuItems(shouldShow as boolean) as void
         m.profileGroupShowingAnimation.control = "start"
         m.notificationIconShowingAnimation.control = "start"
         m.bottomLabelsShowingAnimation.control = "start"
+        m.fadeInAnimation.control = "start"
     else
         m.hidingAnimation.control = "start"
+        m.fadeOutAnimation.control = "start"
     end if 
 end function
 

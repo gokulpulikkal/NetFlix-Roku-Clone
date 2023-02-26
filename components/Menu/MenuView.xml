@@ -12,7 +12,7 @@
 
     <children>
         <Rectangle id="backgroundRect" color="#000" height="1080" width="800"/>
-        <LayoutGroup id="profileLayoutGroup" layoutDirection="horiz" itemSpacings="[30]" translation="[30, 50]">
+        <LayoutGroup id="profileLayoutGroup" layoutDirection="horiz" itemSpacings="[30]" translation="[30, 50]" opacity="0">
             <Poster id="profileIcon" uri="http://www.sdktestinglab.com/animicon.jpg" width="53" height="30"/>
             <Label id="profileNameLabel" text="Gokul Testing" height="30" vertAlign="center"/>
         </LayoutGroup>
@@ -25,12 +25,12 @@
             drawFocusFeedback = "false" 
             vertFocusAnimationStyle = "floatingFocus" />
 
-        <Group id="NotificationBtnGroup">
+        <Group id="NotificationBtnGroup" opacity="0">
             <Poster id="notificationIcon" uri="http://www.sdktestinglab.com/animicon.jpg" width="53" height="30" translation="[30, 1000]"/>
             <Label id="notificationLabel" text="Notification" height="30" vertAlign="center" translation="[90, 1000]"/>
         </Group>
 
-        <Group id="rightEndBottomBtnsGroup" translation="[1200, 1010]">
+        <Group id="rightEndBottomBtnsGroup" opacity="0" translation="[1200, 1010]">
             <LayoutGroup id="rootGroup" layoutDirection="horiz" itemSpacings="[150]">
                 <LayoutGroup id="getHelpLayoutGroup" layoutDirection="horiz" itemSpacings="[30]">
                     <Poster id="getHelpIcon" uri="http://www.sdktestinglab.com/animicon.jpg" width="53" height="30"/>
@@ -84,5 +84,27 @@
                 fieldToInterp="rightEndBottomBtnsGroup.translation" />
         </Animation>
 
+        <Animation id="fadeInAnimation"
+            duration="1.0"
+            repeat="false"
+            easeFunction="outExpo" >
+            <FloatFieldInterpolator id="profileFadeInInterpolator" key="[0.0, 1.0]" 
+            keyValue="[0.0, 1.0]" fieldToInterp="profileLayoutGroup.opacity"/>
+            <FloatFieldInterpolator id="notificationFadeInInterpolator" key="[0.0, 1.0]" 
+            keyValue="[0.0, 1.0]" fieldToInterp="NotificationBtnGroup.opacity"/>
+            <FloatFieldInterpolator id="rightEndBottomBtnsGroupFadeInInterpolator" key="[0.0, 1.0]" 
+            keyValue="[0.0, 1.0]" fieldToInterp="rightEndBottomBtnsGroup.opacity"/>
+        </Animation>
+        <Animation id="fadeOutAnimation"
+            duration="0.4"
+            repeat="false"
+            easeFunction="outExpo" >
+            <FloatFieldInterpolator id="profileFadeInInterpolator" key="[0.0, 1.0]" 
+            keyValue="[1.0, 0.0]" fieldToInterp="profileLayoutGroup.opacity"/>
+            <FloatFieldInterpolator id="notificationFadeInInterpolator" key="[0.0, 1.0]" 
+            keyValue="[1.0, 0.0]" fieldToInterp="NotificationBtnGroup.opacity"/>
+            <FloatFieldInterpolator id="rightEndBottomBtnsGroupFadeInInterpolator" key="[0.0, 1.0]" 
+            keyValue="[1.0, 0.0]" fieldToInterp="rightEndBottomBtnsGroup.opacity"/>
+        </Animation>
     </children>
 </component>
