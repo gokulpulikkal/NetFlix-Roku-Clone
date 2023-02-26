@@ -22,22 +22,16 @@
             drawFocusFeedback = "false" 
             vertFocusAnimationStyle = "floatingFocus" />
 
-        <Group id="NotificationBtnGroup" opacity="0">
-            <Poster id="notificationIcon" uri="http://www.sdktestinglab.com/animicon.jpg" width="53" height="30" translation="[30, 1000]"/>
-            <Label id="notificationLabel" text="Notification" height="30" vertAlign="center" translation="[90, 1000]"/>
-        </Group>
+        <MenuButton id="notificationButton" text="Notification"
+            iconURI="http://www.sdktestinglab.com/animicon.jpg"
+            iconPosterLGTranslation="[30, 1000]" opacity="0" itemLabelTranslation="[90, 1000]"/>
 
         <Group id="rightEndBottomBtnsGroup" opacity="0" translation="[1200, 1010]">
             <LayoutGroup id="rootGroup" layoutDirection="horiz" itemSpacings="[150]">
-                <LayoutGroup id="getHelpLayoutGroup" layoutDirection="horiz" itemSpacings="[30]">
-                    <Poster id="getHelpIcon" uri="http://www.sdktestinglab.com/animicon.jpg" width="53" height="30"/>
-                    <Label id="getHelpLabel" text="Get Help" height="30" vertAlign="center"/>
-                </LayoutGroup>
-
-                <LayoutGroup id="exitLayoutGroup" layoutDirection="horiz" itemSpacings="[30]">
-                    <Poster id="exitIcon" uri="http://www.sdktestinglab.com/animicon.jpg" width="53" height="30"/>
-                    <Label id="exitLabel" text="Exit Netflix" height="30" vertAlign="center"/>
-                </LayoutGroup>
+                <MenuButton id="getHelpButton" text="Get Help"
+                    iconURI="http://www.sdktestinglab.com/animicon.jpg" itemLabelTranslation="[90, 0]"/>
+                <MenuButton id="exitButton" text="Exit Netflix"
+                    iconURI="http://www.sdktestinglab.com/animicon.jpg" itemLabelTranslation="[90, 0]"/>
             </LayoutGroup>
         </Group>
 
@@ -54,7 +48,7 @@
             repeat="false"
             easeFunction="outExpo" >
             <Vector2DFieldInterpolator id = "notificationIconInterpolator"
-                fieldToInterp="notificationIcon.translation" />
+                fieldToInterp="notificationButton.iconPosterLGTranslation" />
         </Animation>
 
         <Animation id="bottomLabelsShowingAnimation"
@@ -62,7 +56,7 @@
             repeat="false"
             easeFunction="outExpo" >
             <Vector2DFieldInterpolator id="notificationLabelInterpolator"
-                fieldToInterp="notificationLabel.translation"/>
+                fieldToInterp="notificationButton.itemLabelTranslation"/>
             <Vector2DFieldInterpolator id="rightEndGroupInterpolator"
                 fieldToInterp="rightEndBottomBtnsGroup.translation"/>
         </Animation>
@@ -74,9 +68,9 @@
             <Vector2DFieldInterpolator id = "profileLayoutGroupHideInterpolator"
                 fieldToInterp="profileLayoutGroup.translation" />
             <Vector2DFieldInterpolator id = "notificationIconHideInterpolator"
-                fieldToInterp="notificationIcon.translation" />
+                fieldToInterp="notificationButton.iconPosterLGTranslation" />
             <Vector2DFieldInterpolator id = "notificationLabelHideInterpolator"
-                fieldToInterp="notificationLabel.translation" />
+                fieldToInterp="notificationButton.itemLabelTranslation" />
             <Vector2DFieldInterpolator id = "rightEndBottomBtnsGroupHideInterpolator"
                 fieldToInterp="rightEndBottomBtnsGroup.translation" />
         </Animation>
@@ -88,7 +82,7 @@
             <FloatFieldInterpolator id="profileFadeInInterpolator" key="[0.0, 1.0]" 
             keyValue="[0.0, 1.0]" fieldToInterp="profileLayoutGroup.opacity"/>
             <FloatFieldInterpolator id="notificationFadeInInterpolator" key="[0.0, 1.0]" 
-            keyValue="[0.0, 1.0]" fieldToInterp="NotificationBtnGroup.opacity"/>
+            keyValue="[0.0, 1.0]" fieldToInterp="notificationButton.opacity"/>
             <FloatFieldInterpolator id="rightEndBottomBtnsGroupFadeInInterpolator" key="[0.0, 1.0]" 
             keyValue="[0.0, 1.0]" fieldToInterp="rightEndBottomBtnsGroup.opacity"/>
         </Animation>
@@ -99,7 +93,7 @@
             <FloatFieldInterpolator id="profileFadeInInterpolator" key="[0.0, 1.0]" 
             keyValue="[1.0, 0.0]" fieldToInterp="profileLayoutGroup.opacity"/>
             <FloatFieldInterpolator id="notificationFadeInInterpolator" key="[0.0, 1.0]" 
-            keyValue="[1.0, 0.0]" fieldToInterp="NotificationBtnGroup.opacity"/>
+            keyValue="[1.0, 0.0]" fieldToInterp="notificationButton.opacity"/>
             <FloatFieldInterpolator id="rightEndBottomBtnsGroupFadeInInterpolator" key="[0.0, 1.0]" 
             keyValue="[1.0, 0.0]" fieldToInterp="rightEndBottomBtnsGroup.opacity"/>
         </Animation>

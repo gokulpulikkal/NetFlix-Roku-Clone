@@ -10,8 +10,7 @@ function init() as void
     m.RIGHT_END_BUTTON_GRP_FINAL_TRANSLATION = [1200, 1010]
     m.SHOW_ANIMATION_DURATION = 0.2
 
-    m.notificationLabel = m.top.findNode("notificationLabel")
-    m.notificationIcon = m.top.findNode("notificationIcon")
+    m.notificationButton = m.top.findNode("notificationButton")
     m.profileLayoutGroup = m.top.findNode("profileLayoutGroup")
     m.rightEndBottomBtnsGroup = m.top.findNode("rightEndBottomBtnsGroup")
     m.menuList = m.top.findNode("exampleMarkupList")
@@ -126,7 +125,7 @@ end function
 '''''''''
 function setInitialTranslations() as void
     m.profileLayoutGroup.translation = m.PROFILE_GROUP_INITIAL_TRANSLATION
-    m.notificationIcon.translation = m.NOTIFICATION_ICON_INITIAL_TRANSLATION
-    m.notificationLabel.translation = m.NOTIFICATION_LABEL_INITIAL_TRANSLATION
+    m.notificationButton.iconPosterLGTranslation = m.NOTIFICATION_ICON_INITIAL_TRANSLATION
+    m.notificationButton.itemLabelTranslation = m.NOTIFICATION_LABEL_INITIAL_TRANSLATION
     m.rightEndBottomBtnsGroup.translation = m.RIGHT_END_BUTTON_GRP_INITIAL_TRANSLATION
 end function

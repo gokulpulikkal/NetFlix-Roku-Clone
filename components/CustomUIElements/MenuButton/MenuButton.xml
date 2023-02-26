@@ -9,6 +9,10 @@
         <field id="iconURI" type="string" alias="iconPoster.uri"/>
         <field id="text" type="string" alias="itemLabel.text"/>
         <field id="cursorOpacity" type="float" alias="itemCursor.opacity"/>
+        <field id="iconWidth" type="float" alias="iconPoster.width"/>
+        <field id="iconHeight" type="float" alias="iconPoster.height"/>
+        <field id="labelHeight" type="float" alias="itemLabel.height"/>
+        <field id="labelWidth" type="float" alias="itemLabel.width"/>
 
         <field id="showFocus" type="boolean" value="false" onChange="onFocusChange"/>
 

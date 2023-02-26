@@ -12,7 +12,7 @@
 <script type="text/brightscript" uri="menuItem.brs"/>
 <children>
     <MenuButton id="button" iconURI="http://www.sdktestinglab.com/animicon.jpg" text="notification"/>
-    <Animation id="showingAnimation"
+    <Animation id="iconShowingAnimation"
         duration="0.2"
         repeat="false"
         easeFunction="outExpo" >

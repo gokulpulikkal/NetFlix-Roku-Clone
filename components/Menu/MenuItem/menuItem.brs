@@ -10,7 +10,7 @@ function init()
     m.SHOW_ANIMATION_DURATION = 0.2
 
     ' Animation references
-    m.showingAnimation = m.top.findNode("showingAnimation")
+    m.iconShowingAnimation = m.top.findNode("iconShowingAnimation")
     m.labelShowingAnimation = m.top.findNode("labelShowingAnimation")
     m.iconGroupInterpolator = m.top.findNode("IconGroupInterpolator")
     m.labelInterpolator = m.top.findNode("labelInterpolator")
@@ -68,12 +68,12 @@ end function
 ' Animation handling 
 function showItem() as void
     m.hidingAnimation.control = "stop"
-    m.showingAnimation.control = "start"
+    m.iconShowingAnimation.control = "start"
     m.labelShowingAnimation.control = "start"
 end function
 
 function hideItem() as void
     m.labelShowingAnimation.control = "stop"
-    m.showingAnimation.control = "stop"
+    m.iconShowingAnimation.control = "stop"
     m.hidingAnimation.control = "start"
 end function
