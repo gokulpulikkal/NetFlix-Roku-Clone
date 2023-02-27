@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component name="MenuProfileButton" extends="Group">
+
+    <script type="text/brightscript" uri="MenuProfileButton.brs" />
+
+    <interface>
+        <field id="showFocus" type="boolean" value="false" onChange="onFocusChange"/>
+    </interface>
+
+    <children>
+        <LayoutGroup id="iconPosterLayoutGroup" layoutDirection="horiz" itemSpacings="[10]">
+            <Poster id="iconPoster" uri="http://www.sdktestinglab.com/animicon.jpg" width="53" height="30"/>
+            <LayoutGroup id="profileNameLayoutGroup" layoutDirection="vert" itemSpacings="[5]">
+                <Label id="profileNameLabel" text="LoneWolf" color="#FFFF" vertAlign="center"/>
+                <Label id="secondaryLabel" text="Switch Profiles" color="#FFFF" vertAlign="center"/>
+            </LayoutGroup>
+        </LayoutGroup>
+    </children>
+</component>

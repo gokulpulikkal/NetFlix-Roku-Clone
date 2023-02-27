@@ -13,10 +13,7 @@
 
     <children>
         <Rectangle id="backgroundRect" color="#000" height="1080" width="800"/>
-        <LayoutGroup id="profileLayoutGroup" layoutDirection="horiz" itemSpacings="[30]" translation="[30, 50]" opacity="0">
-            <Poster id="profileIcon" uri="http://www.sdktestinglab.com/animicon.jpg" width="53" height="30"/>
-            <Label id="profileNameLabel" text="Gokul Testing" height="30" vertAlign="center"/>
-        </LayoutGroup>
+        <MenuProfileButton id="profileLayoutGroup" translation="[30, 50]" opacity="0"/>
 
         <MarkupList id = "exampleMarkupList" itemComponentName = "MarkupListItem" itemSize = "[ 750, 54 ]" 
             itemSpacing = "[ 0, 100 ]" 
