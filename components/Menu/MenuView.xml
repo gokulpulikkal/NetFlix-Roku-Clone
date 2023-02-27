@@ -22,15 +22,13 @@
 
         <MenuButton id="notificationButton" text="Notification"
             iconURI="pkg:/images/MenuIcons/bell.png"
-            iconPosterLGTranslation="[30, 1000]" opacity="0" itemLabelTranslation="[90, 1000]"/>
+            iconPosterLGTranslation="[30, 1000]" opacity="0" itemLabelTranslation="[80, 1000]"/>
 
         <Group id="rightEndBottomBtnsGroup" opacity="0" translation="[1200, 1010]">
-            <LayoutGroup id="rootGroup" layoutDirection="horiz" itemSpacings="[150]">
-                <MenuButton id="getHelpButton" text="Get Help"
-                    iconURI="pkg:/images/MenuIcons/question.png" itemLabelTranslation="[90, 0]"/>
-                <MenuButton id="exitButton" text="Exit Netflix"
-                    iconURI="pkg:/images/MenuIcons/exit.png" itemLabelTranslation="[90, 0]"/>
-            </LayoutGroup>
+            <MenuButton id="getHelpButton" text="Get Help"
+                iconURI="pkg:/images/MenuIcons/question.png" itemLabelTranslation="[80, 0]"/>
+            <MenuButton id="exitButton" text="Exit Netflix" translation="[300, 0]"
+                iconURI="pkg:/images/MenuIcons/exit.png" itemLabelTranslation="[80, 0]"/>
         </Group>
 
         <Animation id="profileGroupShowingAnimation"
