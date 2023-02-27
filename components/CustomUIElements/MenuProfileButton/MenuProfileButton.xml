@@ -8,8 +8,11 @@
     </interface>
 
     <children>
-        <LayoutGroup id="iconPosterLayoutGroup" layoutDirection="horiz" itemSpacings="[10]">
-            <Poster id="iconPoster" uri="http://www.sdktestinglab.com/animicon.jpg" width="53" height="30"/>
+        <LayoutGroup id="iconPosterLayoutGroup" vertAlignment="center" layoutDirection="horiz" itemSpacings="[20]">
+            <Group id="profileIconGroup" >
+                <Rectangle id="focusOutLineRectangle" visible="true" width="54" height="54"/>
+                <Poster id="iconPoster" translation="[4, 4]" uri="pkg:/images/profileIcon.png" width="46" height="46"/>
+            </Group>
             <LayoutGroup id="profileNameLayoutGroup" layoutDirection="vert" itemSpacings="[5]">
                 <Label id="profileNameLabel" text="LoneWolf" color="#FFFF" vertAlign="center"/>
                 <Label id="secondaryLabel" text="Switch Profiles" color="#FFFF" vertAlign="center"/>
