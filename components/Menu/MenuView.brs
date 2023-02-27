@@ -15,6 +15,8 @@ function init() as void
     m.profileBtnGroup = m.top.findNode("profileBtnGroup")
     m.rightEndBottomBtnsGroup = m.top.findNode("rightEndBottomBtnsGroup")
     m.menuList = m.top.findNode("menuMarkupList")
+    m.getHelpButton = m.top.findNode("getHelpButton")
+    m.exitButton = m.top.findNode("exitButton")
 
     ' Animation references
     m.profileGroupShowingAnimation = m.top.findNode("profileGroupShowingAnimation")
