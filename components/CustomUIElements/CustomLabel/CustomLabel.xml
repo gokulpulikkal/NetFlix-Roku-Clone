@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component name="CustomLabel" extends="Label">
+
+    <script type="text/brightscript" uri="CustomLabel.brs" />
+
+    <interface>
+        <field id="fontSize" type="integer" value="22" alias="font.size" />
+        <field id="fontFamily" type="string" value="Montserrat" onChange="updateFont"/>
+        <field id="fontStyle" type="string" value="Medium" onChange="updateFont"/>
+    </interface>
+
+    <children>
+        <Font id="font" role="font"/>
+    </children>
+</component>

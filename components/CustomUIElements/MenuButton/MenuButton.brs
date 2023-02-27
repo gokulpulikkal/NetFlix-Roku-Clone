@@ -7,8 +7,10 @@ end function
 function onFocusChange() as void
     hasFocus = m.top.showFocus OR m.top.hasFocus()
     if (hasFocus)
-        m.itemLabel.color = "#FF0000"
+        m.itemLabel.color = "#FFFFFF"
+        m.itemLabel.fontStyle = "Black"
     else
-        m.itemLabel.color = "#FFFF"
+        m.itemLabel.color = "#8B8B8B"
+        m.itemLabel.fontStyle = "Medium"
     end if
 end function

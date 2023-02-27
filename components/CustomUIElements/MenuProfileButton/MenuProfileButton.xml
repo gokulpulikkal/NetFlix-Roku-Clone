@@ -13,9 +13,9 @@
                 <Rectangle id="focusOutLineRectangle" visible="true" width="54" height="54"/>
                 <Poster id="iconPoster" translation="[4, 4]" uri="pkg:/images/profileIcon.png" width="46" height="46"/>
             </Group>
-            <LayoutGroup id="profileNameLayoutGroup" layoutDirection="vert" itemSpacings="[5]">
-                <Label id="profileNameLabel" text="LoneWolf" color="#FFFF" vertAlign="center"/>
-                <Label id="secondaryLabel" text="Switch Profiles" color="#FFFF" vertAlign="center"/>
+            <LayoutGroup id="profileNameLayoutGroup" layoutDirection="vert" itemSpacings="[0]">
+                <CustomLabel id="profileNameLabel" text="LoneWolf" color="#E3E3E3" vertAlign="center" fontSize="24" fontStyle="Bold"/>
+                <CustomLabel id="secondaryLabel" text="Switch Profiles" color="#767676" vertAlign="center" fontSize="18" fontStyle="Medium"/>
             </LayoutGroup>
         </LayoutGroup>
     </children>
