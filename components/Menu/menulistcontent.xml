@@ -7,25 +7,23 @@
   <children >
 
     <ContentNode 
-      title = "Renderable Nodes" 
-      url = "http://www.sdktestinglab.com/rendericon.jpg" 
-      HDPosterUrl = "http://www.sdktestinglab.com/Tutorial/images/rectanglemulc.jpg" />
+      title = "Search" 
+      url = "pkg:/images/MenuIcons/search.png"/>
     <ContentNode 
-      title = "Z-Order/Parent-Child" 
-      url = "http://www.sdktestinglab.com/zopcicon.jpg" 
-      HDPosterUrl = "http://www.sdktestinglab.com/Tutorial/images/zorectanglesmulc.jpg" />
+      title = "Home" 
+      url = "pkg:/images/MenuIcons/hut.png"/>
     <ContentNode 
-      title = "Animations" 
-      url = "http://www.sdktestinglab.com/animicon.jpg" 
-      HDPosterUrl = "http://www.sdktestinglab.com/Tutorial/images/animsequencemulc.jpg" />
+      title = "New And Popular" 
+      url = "pkg:/images/MenuIcons/increase.png"/>
     <ContentNode 
-      title = "Events and Observers" 
-      url = "http://www.sdktestinglab.com/eoicon.jpg" 
-      HDPosterUrl = "http://www.sdktestinglab.com/Tutorial/images/eotextchangemulc.jpg" />
+      title = "TV Shows" 
+      url = "pkg:/images/MenuIcons/monitor.png"/>
     <ContentNode 
-      title = "Events and Observers" 
-      url = "http://www.sdktestinglab.com/eoicon.jpg" 
-      HDPosterUrl = "http://www.sdktestinglab.com/Tutorial/images/eotextchangemulc.jpg" />
+      title = "Movies" 
+      url = "pkg:/images/MenuIcons/clapper.png"/>
+    <ContentNode 
+      title = "My List" 
+      url = "pkg:/images/MenuIcons/plus.png" />
 
   </children>
 

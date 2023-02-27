@@ -10,7 +10,7 @@
     <children>
         <LayoutGroup id="iconPosterLayoutGroup" vertAlignment="center" layoutDirection="horiz" itemSpacings="[20]">
             <Group id="profileIconGroup" >
-                <Rectangle id="focusOutLineRectangle" visible="true" width="54" height="54"/>
+                <Rectangle id="focusOutLineRectangle" visible="false" width="54" height="54"/>
                 <Poster id="iconPoster" translation="[4, 4]" uri="pkg:/images/profileIcon.png" width="46" height="46"/>
             </Group>
             <LayoutGroup id="profileNameLayoutGroup" layoutDirection="vert" itemSpacings="[0]">

@@ -15,21 +15,21 @@
         <Rectangle id="backgroundRect" color="#000" height="1080" width="800"/>
         <MenuProfileButton id="profileLayoutGroup" opacity="0"/>
 
-        <MarkupList id = "exampleMarkupList" itemComponentName = "MarkupListItem" itemSize = "[ 750, 54 ]" 
-            itemSpacing = "[ 0, 100 ]" 
-            drawFocusFeedback = "false" 
-            vertFocusAnimationStyle = "floatingFocus" />
+        <MarkupList id="exampleMarkupList" itemComponentName="MarkupListItem" itemSize="[ 750, 54 ]" 
+            itemSpacing="[ 0, 30 ]" 
+            drawFocusFeedback="false" 
+            vertFocusAnimationStyle="floatingFocus" />
 
         <MenuButton id="notificationButton" text="Notification"
-            iconURI="http://www.sdktestinglab.com/animicon.jpg"
+            iconURI="pkg:/images/MenuIcons/bell.png"
             iconPosterLGTranslation="[30, 1000]" opacity="0" itemLabelTranslation="[90, 1000]"/>
 
         <Group id="rightEndBottomBtnsGroup" opacity="0" translation="[1200, 1010]">
             <LayoutGroup id="rootGroup" layoutDirection="horiz" itemSpacings="[150]">
                 <MenuButton id="getHelpButton" text="Get Help"
-                    iconURI="http://www.sdktestinglab.com/animicon.jpg" itemLabelTranslation="[90, 0]"/>
+                    iconURI="pkg:/images/MenuIcons/question.png" itemLabelTranslation="[90, 0]"/>
                 <MenuButton id="exitButton" text="Exit Netflix"
-                    iconURI="http://www.sdktestinglab.com/animicon.jpg" itemLabelTranslation="[90, 0]"/>
+                    iconURI="pkg:/images/MenuIcons/exit.png" itemLabelTranslation="[90, 0]"/>
             </LayoutGroup>
         </Group>
 
@@ -37,7 +37,7 @@
             duration="0.2"
             repeat="false"
             easeFunction="outExpo" >
-            <Vector2DFieldInterpolator id = "profileGroupInterpolator"
+            <Vector2DFieldInterpolator id="profileGroupInterpolator"
                 fieldToInterp="profileLayoutGroup.translation"/>
         </Animation>
 
@@ -45,7 +45,7 @@
             duration="0.2"
             repeat="false"
             easeFunction="outExpo" >
-            <Vector2DFieldInterpolator id = "notificationIconInterpolator"
+            <Vector2DFieldInterpolator id="notificationIconInterpolator"
                 fieldToInterp="notificationButton.iconPosterLGTranslation" />
         </Animation>
 
@@ -63,13 +63,13 @@
             duration="0.2"
             repeat="false"
             easeFunction="linear" >
-            <Vector2DFieldInterpolator id = "profileLayoutGroupHideInterpolator"
+            <Vector2DFieldInterpolator id="profileLayoutGroupHideInterpolator"
                 fieldToInterp="profileLayoutGroup.translation" />
-            <Vector2DFieldInterpolator id = "notificationIconHideInterpolator"
+            <Vector2DFieldInterpolator id="notificationIconHideInterpolator"
                 fieldToInterp="notificationButton.iconPosterLGTranslation" />
-            <Vector2DFieldInterpolator id = "notificationLabelHideInterpolator"
+            <Vector2DFieldInterpolator id="notificationLabelHideInterpolator"
                 fieldToInterp="notificationButton.itemLabelTranslation" />
-            <Vector2DFieldInterpolator id = "rightEndBottomBtnsGroupHideInterpolator"
+            <Vector2DFieldInterpolator id="rightEndBottomBtnsGroupHideInterpolator"
                 fieldToInterp="rightEndBottomBtnsGroup.translation" />
         </Animation>
 
