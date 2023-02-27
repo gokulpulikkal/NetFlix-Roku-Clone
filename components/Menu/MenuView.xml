@@ -13,11 +13,11 @@
 
     <children>
         <Rectangle id="backgroundRect" color="#000" height="1080" width="800"/>
-        <MenuProfileButton id="profileLayoutGroup" opacity="0"/>
+        <MenuProfileButton id="profileBtnGroup" opacity="0"/>
 
-        <MarkupList id="exampleMarkupList" itemComponentName="MarkupListItem" itemSize="[ 750, 54 ]" 
+        <MarkupList id="menuMarkupList" itemComponentName="MarkupListItem" itemSize="[ 750, 54 ]" 
             itemSpacing="[ 0, 30 ]" 
-            drawFocusFeedback="false" 
+            drawFocusFeedback="false"
             vertFocusAnimationStyle="floatingFocus" />
 
         <MenuButton id="notificationButton" text="Notification"
@@ -38,7 +38,7 @@
             repeat="false"
             easeFunction="outExpo" >
             <Vector2DFieldInterpolator id="profileGroupInterpolator"
-                fieldToInterp="profileLayoutGroup.translation"/>
+                fieldToInterp="profileBtnGroup.translation"/>
         </Animation>
 
         <Animation id="notificationIconShowingAnimation"
@@ -64,7 +64,7 @@
             repeat="false"
             easeFunction="linear" >
             <Vector2DFieldInterpolator id="profileLayoutGroupHideInterpolator"
-                fieldToInterp="profileLayoutGroup.translation" />
+                fieldToInterp="profileBtnGroup.translation" />
             <Vector2DFieldInterpolator id="notificationIconHideInterpolator"
                 fieldToInterp="notificationButton.iconPosterLGTranslation" />
             <Vector2DFieldInterpolator id="notificationLabelHideInterpolator"
@@ -78,7 +78,7 @@
             repeat="false"
             easeFunction="outExpo" >
             <FloatFieldInterpolator id="profileFadeInInterpolator" key="[0.0, 1.0]" 
-            keyValue="[0.0, 1.0]" fieldToInterp="profileLayoutGroup.opacity"/>
+            keyValue="[0.0, 1.0]" fieldToInterp="profileBtnGroup.opacity"/>
             <FloatFieldInterpolator id="notificationFadeInInterpolator" key="[0.0, 1.0]" 
             keyValue="[0.0, 1.0]" fieldToInterp="notificationButton.opacity"/>
             <FloatFieldInterpolator id="rightEndBottomBtnsGroupFadeInInterpolator" key="[0.0, 1.0]" 
@@ -89,7 +89,7 @@
             repeat="false"
             easeFunction="outExpo" >
             <FloatFieldInterpolator id="profileFadeInInterpolator" key="[0.0, 1.0]" 
-            keyValue="[1.0, 0.0]" fieldToInterp="profileLayoutGroup.opacity"/>
+            keyValue="[1.0, 0.0]" fieldToInterp="profileBtnGroup.opacity"/>
             <FloatFieldInterpolator id="notificationFadeInInterpolator" key="[0.0, 1.0]" 
             keyValue="[1.0, 0.0]" fieldToInterp="notificationButton.opacity"/>
             <FloatFieldInterpolator id="rightEndBottomBtnsGroupFadeInInterpolator" key="[0.0, 1.0]" 

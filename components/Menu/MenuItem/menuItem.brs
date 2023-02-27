@@ -18,6 +18,9 @@ function init()
     m.iconGroupHidingInterpolator = m.top.findNode("IconGroupHidingInterpolator")
     m.labelHidingInterpolator = m.top.findNode("labelHidingInterpolator")
 
+    ' Observations
+    m.global.observeField("showMenu", "onShowMenuChanges")
+
     setInitialTranslation()
     setUpAnimationValues()
 end function
@@ -57,8 +60,17 @@ function showFocus()
 end function
 
 function onListHasFocus(event as object) as void
-    isFocusOnList = event.getData()
-    if (isFocusOnList)
+    isListHasFocus = event.getData()
+    if (isListHasFocus <> true)
+        m.menuButton.showFocus = false
+    else
+        showFocus()
+    end if
+end function
+
+function onShowMenuChanges() as void
+    showMenu = m.global.showMenu
+    if (showMenu)
         showItem()
     else
         hideItem()

@@ -9,11 +9,12 @@ function init() as void
     m.RIGHT_END_BUTTON_GRP_INITIAL_TRANSLATION = [1100, 1010]
     m.RIGHT_END_BUTTON_GRP_FINAL_TRANSLATION = [1200, 1010]
     m.SHOW_ANIMATION_DURATION = 0.2
+    m.global.update({"showMenu": false}, true)
 
     m.notificationButton = m.top.findNode("notificationButton")
-    m.profileLayoutGroup = m.top.findNode("profileLayoutGroup")
+    m.profileBtnGroup = m.top.findNode("profileBtnGroup")
     m.rightEndBottomBtnsGroup = m.top.findNode("rightEndBottomBtnsGroup")
-    m.menuList = m.top.findNode("exampleMarkupList")
+    m.menuList = m.top.findNode("menuMarkupList")
 
     ' Animation references
     m.profileGroupShowingAnimation = m.top.findNode("profileGroupShowingAnimation")
@@ -109,11 +110,15 @@ end function
 function showMenuItems(shouldShow as boolean) as void
     stopAllAnimations()
     if (shouldShow)
+        ' Menu item will consider this flag to show menu item animations. (Not list hasFocus)
+        m.global.showMenu = true
         m.profileGroupShowingAnimation.control = "start"
         m.notificationIconShowingAnimation.control = "start"
         m.bottomLabelsShowingAnimation.control = "start"
         m.fadeInAnimation.control = "start"
     else
+        ' Menu item will consider this flag to show menu item animations. (Not list hasFocus)
+        m.global.showMenu = false
         m.hidingAnimation.control = "start"
         m.fadeOutAnimation.control = "start"
     end if 
@@ -124,7 +129,7 @@ end function
 ' 
 '''''''''
 function setInitialTranslations() as void
-    m.profileLayoutGroup.translation = m.PROFILE_GROUP_INITIAL_TRANSLATION
+    m.profileBtnGroup.translation = m.PROFILE_GROUP_INITIAL_TRANSLATION
     m.notificationButton.iconPosterLGTranslation = m.NOTIFICATION_ICON_INITIAL_TRANSLATION
     m.notificationButton.itemLabelTranslation = m.NOTIFICATION_LABEL_INITIAL_TRANSLATION
     m.rightEndBottomBtnsGroup.translation = m.RIGHT_END_BUTTON_GRP_INITIAL_TRANSLATION
