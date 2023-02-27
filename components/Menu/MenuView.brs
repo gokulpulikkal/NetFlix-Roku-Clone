@@ -8,7 +8,7 @@ function init() as void
     m.NOTIFICATION_LABEL_FINAL_TRANSLATION = [140, 1000]
     m.RIGHT_END_BUTTON_GRP_INITIAL_TRANSLATION = [1100, 1010]
     m.RIGHT_END_BUTTON_GRP_FINAL_TRANSLATION = [1200, 1010]
-    m.SHOW_ANIMATION_DURATION = 0.2
+    m.SHOW_ANIMATION_DURATION = 0.1
     m.global.update({"showMenu": false}, true)
 
     m.notificationButton = m.top.findNode("notificationButton")
@@ -88,7 +88,7 @@ function setAnimationValues() as void
 
     ' Set animation based on visible child length in menuList
     numberOfChild = m.menuList.content.getChildCount()
-    m.bottomLabelsShowingAnimation.duration = m.SHOW_ANIMATION_DURATION + (numberOfChild/10)
+    m.bottomLabelsShowingAnimation.duration = m.SHOW_ANIMATION_DURATION + (numberOfChild/20)
 end function
 
 '''''''''

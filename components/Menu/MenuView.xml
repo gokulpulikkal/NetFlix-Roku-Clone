@@ -34,7 +34,7 @@
         <Animation id="profileGroupShowingAnimation"
             duration="0.2"
             repeat="false"
-            easeFunction="outExpo" >
+            easeFunction="outQuad" >
             <Vector2DFieldInterpolator id="profileGroupInterpolator"
                 fieldToInterp="profileBtnGroup.translation"/>
         </Animation>
@@ -42,7 +42,7 @@
         <Animation id="notificationIconShowingAnimation"
             duration="0.2"
             repeat="false"
-            easeFunction="outExpo" >
+            easeFunction="outQuad" >
             <Vector2DFieldInterpolator id="notificationIconInterpolator"
                 fieldToInterp="notificationButton.iconPosterLGTranslation" />
         </Animation>
@@ -50,7 +50,7 @@
         <Animation id="bottomLabelsShowingAnimation"
             duration="0.2"
             repeat="false"
-            easeFunction="outExpo" >
+            easeFunction="outQuad" >
             <Vector2DFieldInterpolator id="notificationLabelInterpolator"
                 fieldToInterp="notificationButton.itemLabelTranslation"/>
             <Vector2DFieldInterpolator id="rightEndGroupInterpolator"
@@ -74,7 +74,7 @@
         <Animation id="fadeInAnimation"
             duration="1.0"
             repeat="false"
-            easeFunction="outExpo" >
+            easeFunction="outQuad" >
             <FloatFieldInterpolator id="profileFadeInInterpolator" key="[0.0, 1.0]" 
             keyValue="[0.0, 1.0]" fieldToInterp="profileBtnGroup.opacity"/>
             <FloatFieldInterpolator id="notificationFadeInInterpolator" key="[0.0, 1.0]" 
@@ -85,7 +85,7 @@
         <Animation id="fadeOutAnimation"
             duration="0.4"
             repeat="false"
-            easeFunction="outExpo" >
+            easeFunction="outQuad" >
             <FloatFieldInterpolator id="profileFadeInInterpolator" key="[0.0, 1.0]" 
             keyValue="[1.0, 0.0]" fieldToInterp="profileBtnGroup.opacity"/>
             <FloatFieldInterpolator id="notificationFadeInInterpolator" key="[0.0, 1.0]" 

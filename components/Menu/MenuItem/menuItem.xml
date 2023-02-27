@@ -15,7 +15,7 @@
     <Animation id="iconShowingAnimation"
         duration="0.2"
         repeat="false"
-        easeFunction="outExpo" >
+        easeFunction="outQuad" >
         <Vector2DFieldInterpolator id = "IconGroupInterpolator"
             fieldToInterp="button.iconPosterLGTranslation" />
     </Animation>
@@ -23,7 +23,7 @@
     <Animation id="labelShowingAnimation"
         duration="0.2"
         repeat="false"
-        easeFunction="outExpo" >
+        easeFunction="outQuad" >
         <Vector2DFieldInterpolator id = "labelInterpolator"
             fieldToInterp="button.itemLabelTranslation" />
     </Animation>
