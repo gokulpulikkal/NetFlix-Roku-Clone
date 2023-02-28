@@ -52,7 +52,7 @@ end function
 
 function showFocus()
     m.menuButton.cursorOpacity = m.top.focusPercent
-    if m.top.focusPercent > 0.5
+    if (m.top.focusPercent > 0.5 AND m.top.listHasFocus)
         m.menuButton.showFocus = true
     else
         m.menuButton.showFocus = false
@@ -61,10 +61,10 @@ end function
 
 function onListHasFocus(event as object) as void
     isListHasFocus = event.getData()
-    if (isListHasFocus <> true)
-        m.menuButton.showFocus = false
-    else
+    if (isListHasFocus = true)
         showFocus()
+    else
+        m.menuButton.showFocus = false
     end if
 end function
 
