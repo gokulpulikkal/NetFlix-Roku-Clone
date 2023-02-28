@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component name="MenuProfileButton" extends="Group">
+
+    <script type="text/brightscript" uri="MenuProfileButton.brs" />
+
+    <interface>
+        <field id="showFocus" type="boolean" value="false" onChange="onFocusChange"/>
+    </interface>
+
+    <children>
+        <LayoutGroup id="iconPosterLayoutGroup" vertAlignment="center" layoutDirection="horiz" itemSpacings="[20]">
+            <Group id="profileIconGroup" >
+                <Rectangle id="focusOutLineRectangle" visible="false" width="54" height="54"/>
+                <Poster id="iconPoster" translation="[4, 4]" uri="pkg:/images/profileIcon.png" width="46" height="46"/>
+            </Group>
+            <LayoutGroup id="profileNameLayoutGroup" layoutDirection="vert" itemSpacings="[0]">
+                <CustomLabel id="profileNameLabel" text="LoneWolf" color="#767676" vertAlign="center" fontSize="24" fontStyle="Bold"/>
+                <CustomLabel id="secondaryLabel" text="Switch Profiles" color="#767676" vertAlign="center" fontSize="18" fontStyle="Medium"/>
+            </LayoutGroup>
+        </LayoutGroup>
+    </children>
+</component>

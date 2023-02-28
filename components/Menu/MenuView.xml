@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component name="MenuView" extends="Group">
+
+    <script type="text/brightscript" uri="MenuView.brs" />
+    <script type="text/brightscript" uri="MenuKeyEvents.brs" />
+    <script type="text/brightscript" uri="pkg:/components/Utils/CommonChecks.brs" />
+    <script type="text/brightscript" uri="pkg:/components/DataService/DataController/DataController.brs" />
+    <script type="text/brightscript" uri="pkg:/components/Utils/RegistryLibrary.brs" />
+    <script type="text/brightscript" uri="pkg:/components/Utils/UtilFunctions.brs" />
+
+    <interface>
+    </interface>
+
+    <children>
+        <MenuProfileButton id="profileBtnGroup" opacity="0"/>
+
+        <MarkupList id="menuMarkupList" itemComponentName="MarkupListItem" itemSize="[ 750, 54 ]" 
+            itemSpacing="[ 0, 30 ]" 
+            drawFocusFeedback="false"
+            vertFocusAnimationStyle="floatingFocus" />
+
+        <MenuButton id="notificationButton" text="Notification"
+            iconURI="pkg:/images/MenuIcons/bell.png"
+            iconPosterLGTranslation="[30, 1000]" opacity="0" itemLabelTranslation="[80, 1000]"/>
+
+        <Group id="rightEndBottomBtnsGroup" opacity="0" translation="[1200, 1010]">
+            <MenuButton id="getHelpButton" text="Get Help"
+                iconURI="pkg:/images/MenuIcons/question.png" itemLabelTranslation="[80, 0]"/>
+            <MenuButton id="exitButton" text="Exit Netflix" translation="[300, 0]"
+                iconURI="pkg:/images/MenuIcons/exit.png" itemLabelTranslation="[80, 0]"/>
+        </Group>
+
+        <Animation id="profileGroupShowingAnimation"
+            duration="0.2"
+            repeat="false"
+            easeFunction="outQuad" >
+            <Vector2DFieldInterpolator id="profileGroupInterpolator"
+                fieldToInterp="profileBtnGroup.translation"/>
+        </Animation>
+
+        <Animation id="notificationIconShowingAnimation"
+            duration="0.2"
+            repeat="false"
+            easeFunction="outQuad" >
+            <Vector2DFieldInterpolator id="notificationIconInterpolator"
+                fieldToInterp="notificationButton.iconPosterLGTranslation" />
+        </Animation>
+
+        <Animation id="bottomLabelsShowingAnimation"
+            duration="0.2"
+            repeat="false"
+            easeFunction="outQuad" >
+            <Vector2DFieldInterpolator id="notificationLabelInterpolator"
+                fieldToInterp="notificationButton.itemLabelTranslation"/>
+            <Vector2DFieldInterpolator id="rightEndGroupInterpolator"
+                fieldToInterp="rightEndBottomBtnsGroup.translation"/>
+        </Animation>
+
+        <Animation id="hidingAnimation"
+            duration="0.2"
+            repeat="false"
+            easeFunction="linear" >
+            <Vector2DFieldInterpolator id="profileLayoutGroupHideInterpolator"
+                fieldToInterp="profileBtnGroup.translation" />
+            <Vector2DFieldInterpolator id="notificationIconHideInterpolator"
+                fieldToInterp="notificationButton.iconPosterLGTranslation" />
+            <Vector2DFieldInterpolator id="notificationLabelHideInterpolator"
+                fieldToInterp="notificationButton.itemLabelTranslation" />
+            <Vector2DFieldInterpolator id="rightEndBottomBtnsGroupHideInterpolator"
+                fieldToInterp="rightEndBottomBtnsGroup.translation" />
+        </Animation>
+
+        <Animation id="fadeInAnimation"
+            duration="1.0"
+            repeat="false"
+            easeFunction="outQuad" >
+            <FloatFieldInterpolator id="profileFadeInInterpolator" key="[0.0, 1.0]" 
+            keyValue="[0.0, 1.0]" fieldToInterp="profileBtnGroup.opacity"/>
+            <FloatFieldInterpolator id="notificationFadeInInterpolator" key="[0.0, 1.0]" 
+            keyValue="[0.0, 1.0]" fieldToInterp="notificationButton.opacity"/>
+            <FloatFieldInterpolator id="rightEndBottomBtnsGroupFadeInInterpolator" key="[0.0, 1.0]" 
+            keyValue="[0.0, 1.0]" fieldToInterp="rightEndBottomBtnsGroup.opacity"/>
+        </Animation>
+        <Animation id="fadeOutAnimation"
+            duration="0.4"
+            repeat="false"
+            easeFunction="outQuad" >
+            <FloatFieldInterpolator id="profileFadeInInterpolator" key="[0.0, 1.0]" 
+            keyValue="[1.0, 0.0]" fieldToInterp="profileBtnGroup.opacity"/>
+            <FloatFieldInterpolator id="notificationFadeInInterpolator" key="[0.0, 1.0]" 
+            keyValue="[1.0, 0.0]" fieldToInterp="notificationButton.opacity"/>
+            <FloatFieldInterpolator id="rightEndBottomBtnsGroupFadeInInterpolator" key="[0.0, 1.0]" 
+            keyValue="[1.0, 0.0]" fieldToInterp="rightEndBottomBtnsGroup.opacity"/>
+        </Animation>
+    </children>
+</component>

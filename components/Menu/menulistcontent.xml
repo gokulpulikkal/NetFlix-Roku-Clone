@@ -1,0 +1,30 @@
+<?xml version = "1.0" encoding = "utf-8" ?> 
+
+<!--********** Copyright 2016 Roku Corp.  All Rights Reserved. **********-->
+
+<component name = "MarkupListContent" extends = "ContentNode" >
+
+  <children >
+
+    <ContentNode 
+      title = "Search" 
+      url = "pkg:/images/MenuIcons/search.png"/>
+    <ContentNode 
+      title = "Home" 
+      url = "pkg:/images/MenuIcons/hut.png"/>
+    <ContentNode 
+      title = "New And Popular" 
+      url = "pkg:/images/MenuIcons/increase.png"/>
+    <ContentNode 
+      title = "TV Shows" 
+      url = "pkg:/images/MenuIcons/monitor.png"/>
+    <ContentNode 
+      title = "Movies" 
+      url = "pkg:/images/MenuIcons/clapper.png"/>
+    <ContentNode 
+      title = "My List" 
+      url = "pkg:/images/MenuIcons/plus.png" />
+
+  </children>
+
+</component>

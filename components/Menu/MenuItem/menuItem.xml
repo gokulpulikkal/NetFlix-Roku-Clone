@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!--********** Copyright 2016 Roku Corp.  All Rights Reserved. **********-->
+ 
+<component name="MarkupListItem" extends="Group" >
+ 
+<interface> 
+    <field id="itemContent" type="node" onChange="showContent" />
+    <field id="focusPercent" type="float" onChange="showFocus" />
+    <field id="listHasFocus" type="bool" onChange="onListHasFocus" />
+</interface>
+<script type="text/brightscript" uri="menuItem.brs"/>
+<children>
+    <MenuButton id="button" iconURI="http://www.sdktestinglab.com/animicon.jpg" text="notification"/>
+    <Animation id="iconShowingAnimation"
+        duration="0.2"
+        repeat="false"
+        easeFunction="outQuad" >
+        <Vector2DFieldInterpolator id = "IconGroupInterpolator"
+            fieldToInterp="button.iconPosterLGTranslation" />
+    </Animation>
+
+    <Animation id="labelShowingAnimation"
+        duration="0.2"
+        repeat="false"
+        easeFunction="outQuad" >
+        <Vector2DFieldInterpolator id = "labelInterpolator"
+            fieldToInterp="button.itemLabelTranslation" />
+    </Animation>
+
+    <Animation id="hidingAnimation"
+        duration="0.1"
+        repeat="false"
+        easeFunction="linear" >
+        <Vector2DFieldInterpolator id = "IconGroupHidingInterpolator"
+            fieldToInterp="button.iconPosterLGTranslation" />
+        <Vector2DFieldInterpolator id = "labelHidingInterpolator"
+            fieldToInterp="button.itemLabelTranslation" />
+    </Animation>
+</children>
+</component>
