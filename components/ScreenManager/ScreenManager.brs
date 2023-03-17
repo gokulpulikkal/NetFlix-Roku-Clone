@@ -74,3 +74,9 @@ sub goBack(params)
         goToScreen({type:"ExitScreen"})
     end if
 end sub
+
+function focusTheTopView() as void
+    if (m.currentScreen <> invalid)
+        m.currentScreen.setFocus(true)
+    end if
+end function

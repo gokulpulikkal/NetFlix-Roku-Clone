@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<component name="HomeView" extends="Group">
+<component name="BaseView" extends="Group">
 
-    <script type="text/brightscript" uri="HomeView.brs" />
+    <script type="text/brightscript" uri="BaseView.brs" />
+	<script type="text/brightscript" uri="pkg:/components/Utils/ScreenManagerUtils.brs" />
     <script type="text/brightscript" uri="pkg:/components/Utils/CommonChecks.brs" />
     <script type="text/brightscript" uri="pkg:/components/DataService/DataController/DataController.brs" />
     <script type="text/brightscript" uri="pkg:/components/Utils/RegistryLibrary.brs" />
     <script type="text/brightscript" uri="pkg:/components/Utils/UtilFunctions.brs" />
 
     <interface>
+        <function name="onOpen" />
     </interface>
 
-    <children>
-    </children>
+    <children/>
 </component>

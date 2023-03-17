@@ -1,19 +1,20 @@
 function init() as void
-    m.global.append({screenManager: createObject("roSGNode","ScreenManager")})
-
+    initializeScreenManager()
     m.menu = m.top.findNode("menu")
-    m.Button = m.top.findNode("Button")
-    m.Button.setFocus(true)
+    m.top.setFocus(true)
 
-    ' m.global.screenManager.callFunc("goToScreen",{type:"HomeView", data:m.movies})
+    ' Show the splash screen here and call necessary API's to start the app
+
+    ' For now calling the Home screen directly since the API's haven't been integrated
+    goToScreen({type:"HomeView"})
 end function
 
 function onKeyEvent(key as String, press as Boolean) as Boolean
   handled = false
   if press then
     if (key = "right") then
-      m.Button.setFocus(true)
-      handled = false
+      focusTheTopView()
+      handled = true
     else
       m.menu.setFocus(true)
       handled = true

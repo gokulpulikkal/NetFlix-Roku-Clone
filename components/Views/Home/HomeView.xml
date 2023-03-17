@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component name="HomeView" extends="BaseView">
+
+    <script type="text/brightscript" uri="HomeView.brs" />
+    <interface>
+        
+    </interface>
+    <children>
+        <Rectangle id="backgroundRect" width="1920" height="1080" color="#943439"/>
+    </children>
+</component>
