@@ -3,6 +3,7 @@
 function sendRequest(requestObject as object, handler="defaultResponseHandler") as void
     dataTask = CreateObject("roSGNode", "DataServiceTask")
     dataTask.update(requestObject, true)
+    dataTask.update({"requestObject": requestObject}, true)
     dataTask.observeField("content", handler)
     dataTask.control = "RUN"
 

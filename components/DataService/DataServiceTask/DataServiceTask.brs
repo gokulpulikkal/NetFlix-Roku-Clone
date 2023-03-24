@@ -35,7 +35,9 @@ function processRequest(urlResponse)
             else if messageType = "roUrlEvent"
                 content = msg.GetString()
                 if content <> invalid
-                    m.top.content = content
+                    parsedContent = ParseJson(content)
+                    parsedContent.requestObject = m.top.requestObject
+                    m.top.content = parsedContent
                 end if
                 exit while
             end if

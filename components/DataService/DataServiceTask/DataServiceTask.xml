@@ -6,6 +6,6 @@
 		<field id="uri" type="uri" alwaysNotify="true" />
 		<field id="requestType" type="string" value="Get" alwaysNotify="true"/>
 		<field id="param" type="string" value ="" alwaysNotify="true"/>
-		<field id="content" type="string" value =""/>
+		<field id="content" type="assocarray"/>
 	</interface>
 </component>
