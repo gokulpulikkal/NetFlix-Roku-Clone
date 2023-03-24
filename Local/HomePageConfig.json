@@ -1,0 +1,38 @@
+{
+    "HighLightItem": {
+      "description": "Take it randomly form third rail",
+      "fromRailId": "5"
+    },
+    "rails": [
+      {
+        "id": "1",
+        "title": "Latest Movies",
+        "endPoint": "/movie/latest"
+      },
+      {
+        "id": "2",
+        "title": "Now Running In Theaters",
+        "endPoint": "/movie/now_playing"
+      },
+      {
+        "id": "3",
+        "title": "Trending",
+        "endPoint": "/trending/all/week"
+      },
+      {
+        "id": "4",
+        "title": "Top Rated Movies",
+        "endPoint": "/movie/top_rated"
+      },
+      {
+        "id": "5",
+        "title": "Popular Movies",
+        "endPoint": "/movie/popular"
+      },
+      {
+        "id": "6",
+        "title": "Upcoming Movies",
+        "endPoint": "/movie/upcoming"
+      }
+    ]
+  }

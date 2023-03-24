@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <component name="MainScene" extends="Scene"> 
 	<script type="text/brightscript" uri="MainScene.brs" />
+	<script type="text/brightscript" uri="MainSceneModel.brs" />
 	<script type="text/brightscript" uri="pkg:/components/Utils/ScreenManagerUtils.brs" />
+	<script type="text/brightscript" uri="pkg:/components/DataService/DataController/DataController.brs" />
+	<script type="text/brightscript" uri="pkg:/components/Utils/UtilFunctions.brs" />
+	<script type="text/brightscript" uri="pkg:/components/Utils/CommonChecks.brs" />
 	<children>
 		<Group id="screens" />
 		<MenuView id="menu" />
+		<SplashScreen id="splashScreen" visible="false"/>
 	</children>
 </component>

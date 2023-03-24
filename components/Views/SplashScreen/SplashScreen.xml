@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component name="SplashScreen" extends="Group">
+
+    <script type="text/brightscript" uri="SplashScreen.brs" />
+    <interface>
+        
+    </interface>
+    <children>
+        <Rectangle id="backgroundRect" width="1920" height="1080" color="#144646"/>
+    </children>
+</component>

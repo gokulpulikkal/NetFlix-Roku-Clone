@@ -1,12 +1,31 @@
 function init() as void
     initializeScreenManager()
     m.menu = m.top.findNode("menu")
+    m.splashScreen = m.top.findNode("splashScreen")
     m.top.setFocus(true)
 
-    ' Show the splash screen here and call necessary API's to start the app
+    m.homePageConfig = ParseJson(safeString(ReadAsciiFile("pkg:/Local/homePageConfig.json")))
 
+    ' Show the splash screen here and call necessary API's to start the app
+    m.splashScreen.visible = true
+    initiateDataCalls()
     ' For now calling the Home screen directly since the API's haven't been integrated
-    goToScreen({type:"HomeView"})
+    ' goToScreen({type:"HomeView"})
+end function
+
+'''''''''
+' initiateDataCalls: Starting API calls to get first rails data
+' 
+'''''''''
+function initiateDataCalls() as void
+  if (IsAssociativeArray(m.homePageConfig) AND IsArray(m.homePageConfig.rails))
+      m.responseLoadStatus = {}
+      m.railResponseMap = {}
+      for each rail in m.homePageConfig.rails
+        m.responseLoadStatus[rail.id] = false
+        getDataFor(rail)
+      end for
+  end if
 end function
 
 function onKeyEvent(key as String, press as Boolean) as Boolean
