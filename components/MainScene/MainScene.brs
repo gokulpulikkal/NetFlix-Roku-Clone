@@ -33,9 +33,6 @@ function onKeyEvent(key as String, press as Boolean) as Boolean
     else if (key = "left") then
       m.menu.setFocus(true)
       handled = true
-    else
-      m.menu.setFocus(true)
-      handled = true
     end if
   end if
   return handled
