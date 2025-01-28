@@ -35,6 +35,7 @@
       translation = "[ 20, 264 ]" 
       horizAlign = "right" 
       width = "492" 
+      visible = "false"
       opacity = "0.0"/>
 
   </children>
