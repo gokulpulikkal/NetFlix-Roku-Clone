@@ -2,10 +2,23 @@
 <component name="HomeView" extends="BaseView">
 
     <script type="text/brightscript" uri="HomeView.brs" />
+    <script type="text/brightscript" uri="HomeDataRepository/HomeDataRepository.brs" />
     <interface>
         
     </interface>
     <children>
         <Rectangle id="backgroundRect" width="1920" height="1080" color="#943439"/>
+        <RowList 
+            id = "mainRowList" 
+            translation = "[ 130, 160 ]" 
+            itemComponentName = "MainRowListItem" 
+            numRows = "4" 
+            itemSize = "[ 1608, 308 ]" 
+            rowItemSize = "[ [536, 308] ]" 
+            itemSpacing = "[ 0, 40 ]" 
+            showRowLabel = "[ true ]" 
+            drawFocusFeedback = "true" 
+            vertFocusAnimationStyle = "fixedFocusWrap" 
+            rowFocusAnimationStyle = "floatingFocus" />
     </children>
 </component>

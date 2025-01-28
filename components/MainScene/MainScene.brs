@@ -30,6 +30,9 @@ function onKeyEvent(key as String, press as Boolean) as Boolean
     if (key = "right") then
       focusTheTopView()
       handled = true
+    else if (key = "left") then
+      m.menu.setFocus(true)
+      handled = true
     else
       m.menu.setFocus(true)
       handled = true
