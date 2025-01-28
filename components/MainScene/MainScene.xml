@@ -2,8 +2,16 @@
 <component name="MainScene" extends="Scene"> 
 	<script type="text/brightscript" uri="MainScene.brs" />
 	<script type="text/brightscript" uri="pkg:/components/Utils/ScreenManagerUtils.brs" />
+
+	<interface>
+		<function name="toggleSpinner" />
+	</interface>
 	<children>
 		<Group id="screens" />
 		<MenuView id="menu" />
+		<CustomSimpleSpinner
+			id="spinner"
+			visible="false"
+		/>
 	</children>
 </component>

@@ -80,3 +80,9 @@ function focusTheTopView() as void
         m.currentScreen.setFocus(true)
     end if
 end function
+
+function showLoadingScreen(toggle as Boolean) as void
+    if m.scene <> invalid
+        m.scene.callFunc("toggleSpinner", toggle)
+    end if
+end function

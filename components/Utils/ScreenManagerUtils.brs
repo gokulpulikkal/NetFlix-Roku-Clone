@@ -1,10 +1,10 @@
 
 '''''''''
 ' initializeScreenManager: initializes ScreenManager object and saves it to the global node
+' This should Only be called once from the main scene
 ' 
 '''''''''
 function initializeScreenManager() as void
-    ' To be called only once from the main scene
     m.global.append({screenManager: createObject("roSGNode","ScreenManager")})
 end function
 
@@ -33,4 +33,13 @@ end function
 '''''''''
 function focusTheTopView() as void
     m.global.screenManager.callFunc("focusTheTopView")
+end function
+
+'''''''''
+' showLoadingScreen: function to show/hide the loading screen
+' 
+' @param {boolean} data: boolean toggle to show/hide the loading screen
+'''''''''
+function showLoadingScreen(data as boolean) as void
+    m.global.screenManager.callFunc("showLoadingScreen", data)
 end function

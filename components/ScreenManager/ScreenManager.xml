@@ -5,6 +5,7 @@
         <function name="goToScreen"/>
         <function name="goBack"/>
         <function name="focusTheTopView"/>
+        <function name="showLoadingScreen"/>
     </interface>
     <children>
         
