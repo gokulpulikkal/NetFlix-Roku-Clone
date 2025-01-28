@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component name="DetailsScreen" extends="BaseView">
+
+    <script type="text/brightscript" uri="DetailsScreen.brs" />
+    <interface>
+        
+    </interface>
+    <children>
+        <Rectangle id="backgroundRect" width="1920" height="1080" color="#943439"/>
+        <LayoutGroup translation="[150, 160]" id="topRoot" layoutDirection="vert" itemSpacings="[30]">
+            <Label id = "title" text="" width="600" maxLines="2" wrap="true" font="font:LargeBoldSystemFont" />
+            <Label id = "subTitle" text="" width="700" maxLines="5" wrap="true" font="font:MediumSystemFont"  />
+            <Button
+                id = "playButton"
+                text = "Play"
+                showFocusFootprint = "true"
+                minWidth = "240" />
+        </LayoutGroup>
+
+        <Poster 
+            id="poster" 
+            width="607" 
+            height="405" 
+            loadWidth="607"
+            loadHeight="405"
+            loadDisplayMode="scaleToFit"
+            translation="[900, 160]" />
+    </children>
+</component>
