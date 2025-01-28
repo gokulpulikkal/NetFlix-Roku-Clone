@@ -28,7 +28,7 @@ end sub
 
 sub getItemData(item as Object) as Object
     itemData = {}
-    itemData.title = item.shortDescription
+    itemData.title = item.title
     itemData.description = item.longDescription
     itemData.image = item.thumbnail
     itemData.duration = item.content.duration
